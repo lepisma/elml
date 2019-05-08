@@ -1,5 +1,7 @@
 #+TITLE: elml
 
+[[https://travis-ci.com/lepisma/elml][https://img.shields.io/travis/com/lepisma/elml/master.svg?style=flat-square]]
+
 HTML generator for Emacs Lisp.
 
 #+begin_src emacs-lisp :exports both

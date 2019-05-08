@@ -4,7 +4,7 @@
 
 ;; Author: Abhinav Tushar <lepisma@fastmail.com>
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "25"))
+;; Package-Requires: ((emacs "26"))
 ;; URL: https://github.com/lepisma/elml
 
 ;;; Commentary:
@@ -30,6 +30,7 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'subr-x)
 
 (defcustom elml-indent 2
   "Indent value for pprinting.")
@@ -58,7 +59,8 @@
     (format "%s=\"%s\"" (elml-key-name key) val)))
 
 (defun elml-format-attrs (attrs)
-  "Format attrs plist vector to go in html tags."
+  "Format attrs plist vector to go in html tags.
+TODO: Handle solo attributes."
   (if (or (null attrs) (zerop (length attrs)))
       ""
     (let ((pairs (chunkify attrs 2)))
