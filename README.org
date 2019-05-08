@@ -1,0 +1,33 @@
+#+TITLE: elml
+
+HTML generator for Emacs Lisp.
+
+#+begin_src emacs-lisp
+  (elml
+   (:html
+    [:lang "en"]
+    (:head (:title "some page"))
+    (:body (:div "hello world"
+                 (:p [:class "something"] "something else"))
+           (:img [:src "https://via.placeholder.com/150"]))))
+#+end_src
+
+#+RESULTS:
+#+begin_example
+<html lang="en">
+  <head>
+    <title>
+      some page
+    </title>
+  </head>
+  <body>
+    <div>
+      hello world
+      <p class="something">
+        something else
+      </p>
+    </div>
+    <img src="https://via.placeholder.com/150"/>
+  </body>
+</html>
+#+end_example
