@@ -2,7 +2,7 @@
 
 HTML generator for Emacs Lisp.
 
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :exports both
   (elml
    (:html
     [:lang "en"]
